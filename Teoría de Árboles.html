@@ -34,8 +34,10 @@
                         como
                         <b>padre, hijo, hermano, antecesor, sucesor, ancestro</b>.
                     </p>
-                    <div class="Concept">
+                    <div class="container">
                         <h3 class="subtitle">Propiedades</h3>
+                    </div>
+                    <div class="Concept">
                         <p>El nodo del cual otro es <b>hijo</b>, es llamado su <b>nodo padre</b>.
                             <br>
                             <br> Un hijo tiene como máximo un <b>padre</b>; un nodo sin padre es llamado <b>nodo raíz (o simplemente raíz)</b>.
@@ -47,83 +49,115 @@
                             <br> Todos los nodos tienen una sola línea de entrada, excepto el nodo raíz, éste no tiene línea de entrada.
                             <br>
                             <br>Todos los nodos que son <b>descendientes</b> de un mismo nodo "padre", son <b>"hermanos"</b>.
+                        </p>
+                    </div>
+                    <div class="Concept">
+                        <p>
+                            Todo nodo que no tiene ramificaciones (hijos), es un nodo <b>"terminal" u "hoja"</b>.
                             <br>
-                            <br> Todo nodo que no tiene ramificaciones (hijos), es un nodo "terminal" u "hoja".
+                            <br> Todo nodo que no es raíz ni terminal es un nodo <b>"interior"</b>.
                             <br>
-                            <br> Todo nodo que no es raíz ni terminal es un nodo "interior".
+                            <br> <b>"Grado"</b> es el número de descendientes directos de un determinado nodo.
                             <br>
-                            <br> "Grado" es el número de descendientes directos de un determinado nodo.
+                            <br> <b>"Grado del árbol"</b> es el máximo grado de todos los nodos del árbol.
                             <br>
-                            <br> "Grado del árbol" es el máximo grado de todos los nodos del árbol.
+                            <br> <b>"Nivel"</b> es el número de ramificaciones que se deben recorrer para llegar a un determinado nodo.
                             <br>
-                            <br> "Nivel" es el número de ramificaciones que se deben recorrer para llegar a un determinado nodo.
-                            <br>
-                            <br> El nodo raíz tiene nivel 1.
-                            <br>
-                            <br> "Altura del árbol" es el máximo número  de niveles  de todos los nodos del árbol.
-
+                            <br> <b>"Altura del árbol"</b> es el máximo número  de niveles  de todos los nodos del árbol.
 
                         </p>
                     </div>
                     <div class="Concept">
+                        <img src="Árbol.png" alt="" style="width: 70%; margin: auto;">
+                    </div>
+                    <div class="Concept">
+                        <p>
+                            <b>Nodo Raíz:</b> A
+                            <br>
+                            <br>
+                            <b>Nodos Hijos de B:</b> D y E
+                            <br>
+                            <br>
+                            <b>Nodo Hermano de I:</b> H
+                            <br>
+                            <br>
+                            <b>Grado del Árbol:</b> 2
+                            <br>
+                            <br>
+                            <b>Altura del Árbol:</b> 5 niveles
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2 class="subtitle">Longitud de un Árbol</h2>
+                        <p>Es el número de arcos que deben ser recorridos desde la raíz hasta el nodo X.
+                        </p>
+                    </div>
+                    <div class="Concept">
+                        <h3 class="subtitle">Longitud de Camino:</h3>
+                        <p>
+                            Se define la longitud de camino X como el <b>número de arcos</b> que deben ser recorridos para llegar, desde la raíz, al nodo X.
+                            <br>
+                            <br> Por definición, la raíz tiene longitud de camino 1, sus descendientes directos tienen longitud de camino 2 y así sucesivamente</p>
+                    </div>
+                    <div class="Concept">
+                        <img src="Nivel de Árbol.png" alt="">
+                    </div>
+
+                    <div class="Concept">
+                        <h3 class="subtitle">Longitud de Camino Interno</h3>
+                        <p>Es la suma de las longitudes de camino de todos los nodos del árbol.</p>
+                        <img src="LCI.png" alt="">
+                        <br>
+                        <p>En donde <b>i = nivel del árbol, h = altura del árbol, ni = número de nodos en el nivel "i"</b>.</p>
+                        <img src="LCI ejemplo.png" alt="">
+                        <h4>Media de Longitud de Camino Interna</h4>
+                        <p>Es el número de arcos que deben ser recorridos en promedio para llegar de la raíz a un nodo cualquiera del árbol.</p>
+                        <img src="LCM.png" alt="">
+                        <p>En donde <b>LCI = longitud de camino interno</b> y <b>"n" =número de nodos del árbol</b>.
+                        </p>
+                        <img src="LCIM.png" alt="">
+                    </div>
+                    <div class="Concept">
+                        <h3 class="subtitle">Longitud de Camino Externa</h3>
+                        <p>Es la suma de las longitudes de camino de todos los <b>nodos especiales</b> de un <b>árbol extendido</b>.</p>
+                        <img src="LCE.png" alt="">
+                        <p>En donde <b>"h" = altura del árbol, "i" = nivel del árbol y "nei" = número de nodos especiales en el nivel "i"</b>.
+                        </p>
+                        <img src="LCEe.png" alt="">
+                        <h4>Media de Longitud de Camino Externo</h4>
+                        <p>Es el número de arcos que deben ser recorridos en promedio desde la raíz hasta un nodo especial cualquiera del árbol.</p>
+                        <img src="LCEM.png" alt="">
+                        <p>En donde <b>LCE = longitud de camino externo</b>  y <b>"ne" = número de nodos especiales</b>.
+                        </p>
+                        <img src="LCEMe.png" alt="">
+                    </div>
+                    <br>
+                    <div class="Concept">
+                        <h4>Árbol Extendido:</h4>
+                        <p>Es aquel en el que el <b>número de hijos de cada nodo</b> es igual al <b>grado del árbol</b>. Para que se cumpla esta condición si es necesario se le agregan nodos especiales al árbol, tantos como sea necesario para que se cumpla
+                            la condición.
+                        </p>
 
                     </div>
                     <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
+                        <h4>Nodos Especiales:</h4>
+                        <p>Su objetivo es reemplazar las ramas vacías o nulas y no pueden tener descendientes.
+                        </p>
                     </div>
 
-                    <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
-                    </div>
-                    <div class="Concept">
-
-                    </div>
                 </div>
                 <h2 class="titulo">Practica lo Aprendido</h2>
                 <div class="container">
-                    <div class="Concept">
-                        <h3 class="subtitle"></h3>
-                        <p>
-                        </p>
-                    </div>
-                    <div class="Concept">
-                        <h3 class="subtitle"></h3>
-                        <p>
-
-                        </p>
+                    <p><b>1.</b> Calcular la Longitud del Camino Interno y Externo, así como su respectiva media del siguiente árbol:
+                    </p>
+                    <div class="container">
+                        <img src="ÁrbolPractica.png" alt="">
                     </div>
                     <div class="Concept">
                         <input type="checkbox" id="btnCheck">
                         <label class="fas fa-check-square" for="btnCheck"><h4>Respuestas</h4></label>
                         <div class="respuesta">
-                            <h4 class="subtitle"></h4>
-                            <p>
-                            </p>
-                            <h4 class="subtitle"></h4>
-                            <p>
-
-                            </p>
+                            <img src="Árbol Respuestas.png" alt="">
                         </div>
                     </div>
                 </div>
